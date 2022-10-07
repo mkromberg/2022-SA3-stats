@@ -8,7 +8,7 @@
  :Else
      r←0 2⍴0
      :For fn :In STATFNS
-         r⍪←fn(⍎fn,' data')
+         r⍪←fn((statfns⍎fn) data)
      :EndFor
      ⎕←'   (computed)'
      RESULTS←(keys,⊂data)(results,⊂r)
