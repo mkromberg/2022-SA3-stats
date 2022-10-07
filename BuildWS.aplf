@@ -1,0 +1,10 @@
+ BuildWS;folder;links
+ :If 2≠≢links←⎕SE.Link.Status #
+ :OrIf 'stats'≢2⊃⎕NPARTS folder←⊃links[2;2]
+    '# is not linked to a stats folder' ⎕SIGNAL 2
+ :EndIf
+
+ ⎕SE.Link.Break #
+ ⎕LX←'Main'
+ ⎕SAVE ⎕←folder,'/stats-built.dws'
+ ⎕←'Do not continue development in this workspace!'
