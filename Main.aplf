@@ -5,7 +5,7 @@
 
  :Repeat
      ⎕←'Enter some numbers:'
-     :If 0≠n←↑⍴data←,⎕
+     :If 0≠n←⊃⍴data←,⎕
          ⎕←ComputeStats data
      :EndIf
  :Until 0=n
